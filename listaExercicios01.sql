@@ -1,5 +1,4 @@
-SELECT produto
-FROM vendas
-GROUP BY produto
-ORDER BY SUM(receita)
-LIMIT 1;
+SELECT alunos.nome, COUNT(matriculas.id) AS total_de_matriculas
+FROM alunos
+LEFT JOIN matriculas ON alunos.id = matriculas.aluno_id
+GROUP BY alunos.nome;
