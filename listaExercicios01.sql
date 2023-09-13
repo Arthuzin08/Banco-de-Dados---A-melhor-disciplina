@@ -1,1 +1,1 @@
-SELECT nome FROM autores WHERE YEAR(nascimento) < 1900;
+SELECT titulo FROM livros WHERE autor_id = 1;
