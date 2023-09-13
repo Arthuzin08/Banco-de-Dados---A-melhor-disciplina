@@ -1,3 +1,3 @@
-SELECT autores.nome, COALESCE(livros.titulo, 'Nenhum livro publicado') AS livro
-FROM autores
-LEFT JOIN livros ON autores.id = livros.autor_id;
+SELECT matriculas.curso, COALESCE(alunos.nome, 'Nenhum aluno matriculado') AS aluno
+FROM matriculas
+RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
