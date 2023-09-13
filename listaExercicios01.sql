@@ -1,1 +1,4 @@
-SELECT titulo FROM livros WHERE autor_id = 1;
+SELECT alunos.nome
+FROM alunos
+INNER JOIN matriculas ON alunos.id = matriculas.aluno_id
+WHERE matriculas.curso = 'Engenharia de Software';
