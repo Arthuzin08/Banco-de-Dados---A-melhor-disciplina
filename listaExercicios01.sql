@@ -1,3 +1,3 @@
-SELECT matriculas.curso, COALESCE(alunos.nome, 'Nenhum aluno matriculado') AS aluno
-FROM matriculas
-RIGHT JOIN alunos ON matriculas.aluno_id = alunos.id;
+SELECT alunos.nome, matriculas.curso
+FROM alunos
+INNER JOIN matriculas ON alunos.id = matriculas.aluno_id;
