@@ -1,5 +1,3 @@
-SELECT autores.nome, COUNT(livros.id) AS total_de_livros
-FROM autores
-LEFT JOIN livros ON autores.id = livros.autor_id
-GROUP BY autores.nome
-HAVING total_de_livros > 2;
+SELECT livros.titulo, autores.nome AS autor
+FROM livros
+INNER JOIN autores ON livros.autor_id = autores.id;
